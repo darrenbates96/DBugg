@@ -1,10 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LandingPageComponent } from './cosmetic/pages/landing-page/landing-page.component';
 
-const routes: Routes = [
-  { path: '', component: LandingPageComponent, pathMatch: 'full' },
-];
+const routes: Routes = [];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

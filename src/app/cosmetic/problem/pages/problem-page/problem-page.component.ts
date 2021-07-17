@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Problem } from 'src/app/core/models';
+import { CommentClass, ReplyClass } from 'src/app/core/classes';
+import { FireStoreComment, FireStoreReply, Problem } from 'src/app/core/models';
 
 @Component({
   selector: 'app-problem-page',
@@ -8,6 +9,8 @@ import { Problem } from 'src/app/core/models';
 })
 export class ProblemPageComponent implements OnInit {
   problem: Problem = {} as Problem;
+  comment: FireStoreComment = new CommentClass();
+  reply: FireStoreReply = new ReplyClass();
 
   constructor() {}
 

@@ -11,22 +11,22 @@ export interface FireStoreProblem {
 }
 
 export interface FireStoreComment {
-  id: number;
-  problemId: number;
-  dateCreated: Date;
+  id: number | null;
+  problemId: number | null;
+  dateCreated: Date | null;
   content: string;
   replyIds: number[];
 }
 
 export interface FireStoreReply {
-  id: number;
-  commentId: number;
-  dateCreated: Date;
+  id: number | null;
+  commentId: number | null;
+  dateCreated: Date | null;
   content: string;
 }
 
 export interface FireStoreContactRecord {
-  id: number;
+  id: number | null;
   email: string;
   content: string;
 }

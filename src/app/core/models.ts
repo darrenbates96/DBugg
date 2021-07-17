@@ -1,11 +1,5 @@
 // FireStore Models
 
-export interface FireStoreUser {
-  id: number;
-  name: string;
-  email: string;
-}
-
 export interface FireStoreProblem {
   id: number;
   dateCreated: Date;
@@ -20,7 +14,6 @@ export interface FireStoreComment {
   id: number;
   problemId: number;
   dateCreated: Date;
-  userId: number;
   content: string;
   replyIds: number[];
 }
@@ -29,13 +22,12 @@ export interface FireStoreReply {
   id: number;
   commentId: number;
   dateCreated: Date;
-  userId: number;
   content: string;
 }
 
 export interface FireStoreContactRecord {
   id: number;
-  userId: number;
+  email: string;
   content: string;
 }
 
@@ -64,7 +56,6 @@ export interface Problem {
 export interface Comment {
   id: number;
   dateCreated: Date;
-  user: FireStoreUser;
   content: string;
   replies: Reply[];
 }
@@ -72,6 +63,5 @@ export interface Comment {
 export interface Reply {
   id: number;
   dateCreated: Date;
-  user: FireStoreUser;
   content: string;
 }

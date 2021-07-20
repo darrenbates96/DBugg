@@ -65,3 +65,10 @@ export interface Reply {
   dateCreated: Date;
   content: string;
 }
+
+// Navigation Bar
+
+export interface NavigationBarItem {
+  item: string;
+  path: string;
+}

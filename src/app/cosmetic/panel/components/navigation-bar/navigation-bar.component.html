@@ -47,11 +47,20 @@
   </div>
   <!---->
 
-  <!-- Menu (Mobile) -->
+  <!-- Full Page Menu (Mobile) -->
   <div
-    class="navigation-bar-full-page-menu"
-    [class.navigation-bar-full-page-menu-disabled]="!showFullPageMenu"
+    class="navigation-bar-full-page-menu-container"
+    [class.navigation-bar-full-page-menu-container-disabled]="!showFullPageMenu"
   >
+    <ul class="navigation-bar-full-page-menu">
+      <li
+        *ngFor="let item of items"
+        class="navigation-bar-full-page-menu-item"
+        (click)="performNavigation(item.path)"
+      >
+        {{ item.item }}
+      </li>
+    </ul>
     <div
       class="icon-container navigation-bar-close-icon-container"
       [class.animate-icon-container]="animateIcon['close']"

@@ -48,7 +48,7 @@
   height: calc(100% - 60px);
 }
 
-.navigation-bar-full-page-menu {
+.navigation-bar-full-page-menu-container {
   position: absolute;
   top: 0;
   left: 0;
@@ -59,8 +59,19 @@
   @extend .align-items-center;
   background-color: #ffffff;
 }
-.navigation-bar-full-page-menu-disabled {
+.navigation-bar-full-page-menu-container-disabled {
   display: none;
+}
+
+.navigation-bar-full-page-menu {
+  list-style: none;
+}
+
+.navigation-bar-full-page-menu-item {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 36px;
+  @extend .clickable;
 }
 
 .navigation-bar-close-icon-container {

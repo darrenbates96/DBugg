@@ -25,6 +25,9 @@ export class NavigationBarComponent implements OnInit {
 
   performNavigation(path: string) {
     this.router.navigate([path]);
+    if (this.showFullPageMenu) {
+      this.showFullPageMenu = false;
+    }
   }
 
   performToggleFullPageMenu(iconName: string) {

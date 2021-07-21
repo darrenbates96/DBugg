@@ -1,76 +1,78 @@
 <section class="navigation-bar-container">
-  <!-- Navigation Bar (Desktop) -->
-  <ul class="navigation-bar-menu-desktop">
-    <li
-      *ngFor="let item of items"
-      class="navigation-bar-menu-item"
-      (click)="performNavigation(item.path)"
-    >
-      {{ item.item }}
-    </li>
-  </ul>
-  <!---->
+	<!-- Navigation Bar (Desktop) -->
+	<ul class="navigation-bar-menu-desktop">
+		<li
+			*ngFor="let item of items"
+			class="navigation-bar-menu-item"
+			(click)="performNavigation(item.path)"
+		>
+			{{ item.item }}
+		</li>
+	</ul>
+	<!---->
 
-  <!-- Content -->
-  <div class="navigation-bar-content">
-    <ng-content content></ng-content>
-  </div>
-  <!---->
+	<!-- Content -->
+	<div class="navigation-bar-content">
+		<ng-content content></ng-content>
+	</div>
+	<!---->
 
-  <!-- Navigation Bar (Mobile) -->
-  <div class="navigation-bar-menu">
-    <div class="icon-container">
-      <div class="navigation-bar-standby-circle"></div>
-    </div>
-    <div
-      class="icon-container"
-      [class.animate-icon-container]="animateIcon['menu']"
-      (click)="performToggleFullPageMenu('menu')"
-    >
-      <img
-        class="navigation-bar-icon"
-        src="./assets/menu.png"
-        alt="Three horizontal lines above one another"
-      />
-    </div>
-    <div
-      class="icon-container"
-      [class.animate-icon-container]="animateIcon['search']"
-      (click)="performAnimateIcon('search')"
-    >
-      <img
-        class="navigation-bar-icon"
-        src="./assets/search.png"
-        alt="Magnifying glass"
-      />
-    </div>
-  </div>
-  <!---->
+	<!-- Navigation Bar (Mobile) -->
+	<div class="navigation-bar-menu">
+		<div class="icon-container">
+			<div class="navigation-bar-standby-circle"></div>
+		</div>
+		<div
+			class="icon-container"
+			[class.animate-icon-container]="animateIcon['menu']"
+			(click)="performToggleFullPageMenu('menu')"
+		>
+			<img
+				class="navigation-bar-icon"
+				src="./assets/menu.png"
+				alt="Three horizontal lines above one another"
+			/>
+		</div>
+		<div
+			class="icon-container"
+			[class.animate-icon-container]="animateIcon['search']"
+			(click)="performAnimateIcon('search')"
+		>
+			<img
+				class="navigation-bar-icon"
+				src="./assets/search.png"
+				alt="Magnifying glass"
+			/>
+		</div>
+	</div>
+	<!---->
 
-  <!-- Full Page Menu (Mobile) -->
-  <div
-    class="navigation-bar-full-page-menu-container"
-    [class.navigation-bar-full-page-menu-container-disabled]="!showFullPageMenu"
-  >
-    <ul class="navigation-bar-full-page-menu">
-      <li
-        *ngFor="let item of items"
-        class="navigation-bar-full-page-menu-item"
-        (click)="performNavigation(item.path)"
-      >
-        {{ item.item }}
-      </li>
-    </ul>
-    <div
-      class="icon-container navigation-bar-close-icon-container"
-      [class.animate-icon-container]="animateIcon['close']"
-      (click)="performToggleFullPageMenu('close')"
-    >
-      <img
-        class="navigation-bar-icon"
-        src="./assets/close.png"
-        alt="Black cross"
-      />
-    </div>
-  </div>
+	<!-- Full Page Menu (Mobile) -->
+	<div
+		class="navigation-bar-full-page-menu-container"
+		[class.navigation-bar-full-page-menu-container-disabled]="
+			!showFullPageMenu
+		"
+	>
+		<ul class="navigation-bar-full-page-menu">
+			<li
+				*ngFor="let item of items"
+				class="navigation-bar-full-page-menu-item"
+				(click)="performNavigation(item.path)"
+			>
+				{{ item.item }}
+			</li>
+		</ul>
+		<div
+			class="icon-container navigation-bar-close-icon-container"
+			[class.animate-icon-container]="animateIcon['close']"
+			(click)="performToggleFullPageMenu('close')"
+		>
+			<img
+				class="navigation-bar-icon"
+				src="./assets/close.png"
+				alt="Black cross"
+			/>
+		</div>
+	</div>
 </section>

@@ -1,5 +1,57 @@
-.navigation-bar-container,
-.navigation-bar-content {
+@import "src/styles.scss";
+
+// TODO: Remove below and create/find blog icon
+.navigation-bar-standby-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #0f0f0f;
+}
+
+.navigation-bar-container {
   width: 100%;
   height: 100%;
+}
+
+.navigation-bar-menu {
+  width: calc(100% - 32px);
+  height: 60px;
+  @extend .flex-row;
+  @extend .justify-content-space-between;
+  @extend .align-items-center;
+  padding: 0 16px;
+  background-color: #ffffff;
+}
+
+.navigation-bar-menu-desktop {
+  display: none;
+  width: 100%;
+  height: 60px;
+  list-style: none;
+  background-color: #ffffff;
+}
+
+.navigation-bar-menu-item {
+  display: inline-block;
+}
+
+.navigation-bar-icon {
+  height: 30px;
+  width: auto;
+}
+
+.navigation-bar-content {
+  width: 100%;
+  height: calc(100% - 60px);
+}
+
+// Media Queries
+
+@media screen and (min-width: 576px) {
+  .navigation-bar-menu {
+    display: none;
+  }
+  .navigation-bar-menu-desktop {
+    display: block;
+  }
 }

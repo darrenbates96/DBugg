@@ -1,6 +1,6 @@
 <section class="navigation-bar-container">
-  <!-- Navigation Bar -->
-  <ul class="navigation-bar-menu">
+  <!-- Navigation Bar (Desktop) -->
+  <ul class="navigation-bar-menu-desktop">
     <li
       *ngFor="let item of items"
       class="navigation-bar-menu-item"
@@ -14,6 +14,22 @@
   <!-- Content -->
   <div class="navigation-bar-content">
     <ng-content content></ng-content>
+  </div>
+  <!---->
+
+  <!-- Navigation Bar (Mobile) -->
+  <div class="navigation-bar-menu">
+    <div class="navigation-bar-standby-circle"></div>
+    <img
+      class="navigation-bar-icon"
+      src="./assets/menu.png"
+      alt="Three horizontal lines above one another"
+    />
+    <img
+      class="navigation-bar-icon"
+      src="./assets/search.png"
+      alt="Magnifying glass"
+    />
   </div>
   <!---->
 </section>

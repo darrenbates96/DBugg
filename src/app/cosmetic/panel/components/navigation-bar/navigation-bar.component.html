@@ -20,10 +20,11 @@
   <!-- Navigation Bar (Mobile) -->
   <div class="navigation-bar-menu">
     <div class="navigation-bar-standby-circle"></div>
+
     <div
       class="icon-container"
       [class.animate-icon-container]="animateIcon['menu']"
-      (click)="performAnimateIcon('menu')"
+      (click)="performToggleFullPageMenu('menu')"
     >
       <img
         class="navigation-bar-icon"
@@ -31,6 +32,7 @@
         alt="Three horizontal lines above one another"
       />
     </div>
+
     <div
       class="icon-container"
       [class.animate-icon-container]="animateIcon['search']"
@@ -44,4 +46,22 @@
     </div>
   </div>
   <!---->
+
+  <!-- Menu (Mobile) -->
+  <div
+    class="navigation-bar-full-page-menu"
+    [class.navigation-bar-full-page-menu-disabled]="!showFullPageMenu"
+  >
+    <div
+      class="icon-container"
+      [class.animate-icon-container]="animateIcon['close']"
+      (click)="performToggleFullPageMenu('close')"
+    >
+      <img
+        class="navigation-bar-icon"
+        src="./assets/close.png"
+        alt="Black cross"
+      />
+    </div>
+  </div>
 </section>

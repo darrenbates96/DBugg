@@ -9,6 +9,7 @@
 }
 
 .navigation-bar-container {
+  position: relative;
   width: 100%;
   height: 100%;
 }
@@ -45,6 +46,18 @@
 .navigation-bar-content {
   width: 100%;
   height: calc(100% - 60px);
+}
+
+.navigation-bar-full-page-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+}
+.navigation-bar-full-page-menu-disabled {
+  display: none;
 }
 
 // Media Queries

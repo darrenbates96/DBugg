@@ -11,9 +11,12 @@ import { NavigationBarItem } from 'src/app/core/models';
 export class NavigationBarComponent implements OnInit {
   items: NavigationBarItem[] = navigationBarItems;
 
+  showFullPageMenu: boolean = false;
+
   animateIcon: { [iconName: string]: boolean } = {
     menu: false,
     search: false,
+    close: false,
   };
 
   constructor(private router: Router) {}
@@ -22,6 +25,13 @@ export class NavigationBarComponent implements OnInit {
 
   performNavigation(path: string) {
     this.router.navigate([path]);
+  }
+
+  performToggleFullPageMenu(iconName: string) {
+    this.performAnimateIcon(iconName);
+    setTimeout(() => {
+      this.showFullPageMenu = !this.showFullPageMenu;
+    }, 400);
   }
 
   performAnimateIcon(iconName: string) {

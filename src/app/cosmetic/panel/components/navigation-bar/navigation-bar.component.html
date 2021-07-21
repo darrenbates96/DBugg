@@ -19,8 +19,9 @@
 
   <!-- Navigation Bar (Mobile) -->
   <div class="navigation-bar-menu">
-    <div class="navigation-bar-standby-circle"></div>
-
+    <div class="icon-container">
+      <div class="navigation-bar-standby-circle"></div>
+    </div>
     <div
       class="icon-container"
       [class.animate-icon-container]="animateIcon['menu']"
@@ -32,7 +33,6 @@
         alt="Three horizontal lines above one another"
       />
     </div>
-
     <div
       class="icon-container"
       [class.animate-icon-container]="animateIcon['search']"
@@ -53,7 +53,7 @@
     [class.navigation-bar-full-page-menu-disabled]="!showFullPageMenu"
   >
     <div
-      class="icon-container"
+      class="icon-container navigation-bar-close-icon-container"
       [class.animate-icon-container]="animateIcon['close']"
       (click)="performToggleFullPageMenu('close')"
     >

@@ -30,11 +30,11 @@ span {
 h1,
 h2,
 li {
-  color: $text-black;
+  color: $black;
 }
 
 p {
-  color: $text-grey;
+  color: $grey;
 }
 
 // Layout
@@ -82,6 +82,24 @@ p {
   -webkit-align-items: flex-end;
   -ms-flex-align: end;
   align-items: flex-end;
+}
+
+// Icon
+
+.icon-container {
+  width: 48px;
+  height: 48px;
+  @extend .flex-column;
+  @extend .justify-content-center;
+  @extend .align-items-center;
+  border-radius: 50%;
+  border: 1px solid #ffffff;
+  transition: 0.2s ease-in-out;
+}
+
+.animate-icon-container {
+  border: 1px solid $grey;
+  transform: scale(1.03);
 }
 
 // Other

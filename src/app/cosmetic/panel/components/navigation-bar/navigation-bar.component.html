@@ -20,16 +20,28 @@
   <!-- Navigation Bar (Mobile) -->
   <div class="navigation-bar-menu">
     <div class="navigation-bar-standby-circle"></div>
-    <img
-      class="navigation-bar-icon"
-      src="./assets/menu.png"
-      alt="Three horizontal lines above one another"
-    />
-    <img
-      class="navigation-bar-icon"
-      src="./assets/search.png"
-      alt="Magnifying glass"
-    />
+    <div
+      class="icon-container"
+      [class.animate-icon-container]="animateIcon['menu']"
+      (click)="performAnimateIcon('menu')"
+    >
+      <img
+        class="navigation-bar-icon"
+        src="./assets/menu.png"
+        alt="Three horizontal lines above one another"
+      />
+    </div>
+    <div
+      class="icon-container"
+      [class.animate-icon-container]="animateIcon['search']"
+      (click)="performAnimateIcon('search')"
+    >
+      <img
+        class="navigation-bar-icon"
+        src="./assets/search.png"
+        alt="Magnifying glass"
+      />
+    </div>
   </div>
   <!---->
 </section>

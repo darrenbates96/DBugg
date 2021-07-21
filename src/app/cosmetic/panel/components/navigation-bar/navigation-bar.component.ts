@@ -11,11 +11,23 @@ import { NavigationBarItem } from 'src/app/core/models';
 export class NavigationBarComponent implements OnInit {
   items: NavigationBarItem[] = navigationBarItems;
 
+  animateIcon: { [iconName: string]: boolean } = {
+    menu: false,
+    search: false,
+  };
+
   constructor(private router: Router) {}
 
   ngOnInit(): void {}
 
   performNavigation(path: string) {
     this.router.navigate([path]);
+  }
+
+  performAnimateIcon(iconName: string) {
+    this.animateIcon[iconName] = true;
+    setTimeout(() => {
+      this.animateIcon[iconName] = false;
+    }, 200);
   }
 }

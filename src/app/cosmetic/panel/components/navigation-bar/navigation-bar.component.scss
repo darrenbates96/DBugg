@@ -33,11 +33,13 @@
 
 .navigation-bar-menu-item {
   display: inline-block;
+  @extend .clickable;
 }
 
 .navigation-bar-icon {
   height: 30px;
   width: auto;
+  @extend .clickable;
 }
 
 .navigation-bar-content {

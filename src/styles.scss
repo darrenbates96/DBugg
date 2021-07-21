@@ -30,11 +30,11 @@ span {
 h1,
 h2,
 li {
-  color: $black;
+  color: $text-black;
 }
 
 p {
-  color: $grey;
+  color: $text-grey;
 }
 
 // Layout
@@ -93,12 +93,11 @@ p {
   @extend .justify-content-center;
   @extend .align-items-center;
   border-radius: 50%;
-  border: 1px solid #ffffff;
   transition: 0.2s ease-in-out;
 }
 
 .animate-icon-container {
-  border: 1px solid $grey;
+  background-color: $animation-grey;
   transform: scale(1.03);
 }
 

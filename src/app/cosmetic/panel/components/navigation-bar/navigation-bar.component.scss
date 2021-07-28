@@ -24,18 +24,28 @@
   background-color: #ffffff;
 }
 
-.navigation-bar-menu-desktop {
+.navigation-bar-menu-container {
   display: none;
   width: 100%;
   height: 60px;
-  list-style: none;
   background-color: #ffffff;
+}
+
+.navigation-bar-menu-desktop {
+  display: inline-block;
+  width: 253px;
+  height: 18px;
+  list-style: none;
 }
 
 .navigation-bar-menu-item {
   display: inline-block;
+  margin-right: 24px;
   @extend .clickable;
 }
+.navigation-bar-menu-item:last-child {
+  margin-right: 0;
+} 
 
 .navigation-bar-icon {
   height: 30px;
@@ -84,7 +94,7 @@
   .navigation-bar-menu {
     display: none;
   }
-  .navigation-bar-menu-desktop {
+  .navigation-bar-menu-container {
     display: block;
   }
 }

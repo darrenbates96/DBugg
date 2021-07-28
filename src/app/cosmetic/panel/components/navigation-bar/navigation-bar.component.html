@@ -1,14 +1,16 @@
 <section class="navigation-bar-container">
 	<!-- Navigation Bar (Desktop) -->
-	<ul class="navigation-bar-menu-desktop">
-		<li
-			*ngFor="let item of items"
-			class="navigation-bar-menu-item"
-			(click)="performNavigation(item.path)"
-		>
-			{{ item.item }}
-		</li>
-	</ul>
+	<div class="navigation-bar-menu-container">
+		<ul class="navigation-bar-menu-desktop">
+			<li
+				*ngFor="let item of items"
+				class="navigation-bar-menu-item"
+				(click)="performNavigation(item.path)"
+			>
+				{{ item.item }}
+			</li>
+		</ul>
+	</div>
 	<!---->
 
 	<!-- Content -->

@@ -36,7 +36,7 @@
 		<div
 			class="icon-container"
 			[class.animate-icon-container]="animateIcon['search']"
-			(click)="performAnimateIcon('search')"
+			(click)="performToggleSearchBar()"
 		>
 			<img
 				class="navigation-bar-icon"
@@ -54,7 +54,7 @@
 			!showFullPageMenu
 		"
 	>
-		<ul class="navigation-bar-full-page-menu">
+		<ul class="navigation-bar-full-page-menu fade-in-slide-up">
 			<li
 				*ngFor="let item of items"
 				class="navigation-bar-full-page-menu-item"
@@ -75,4 +75,5 @@
 			/>
 		</div>
 	</div>
+	<!---->
 </section>

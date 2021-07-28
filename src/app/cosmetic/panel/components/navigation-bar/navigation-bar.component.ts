@@ -31,13 +31,17 @@ export class NavigationBarComponent implements OnInit {
   }
 
   performToggleFullPageMenu(iconName: string) {
-    this.performAnimateIcon(iconName);
+    this.animateIconHelper(iconName);
     setTimeout(() => {
       this.showFullPageMenu = !this.showFullPageMenu;
     }, 400);
   }
 
-  performAnimateIcon(iconName: string) {
+  performToggleSearchBar() {
+    this.animateIconHelper('search');
+  }
+
+  animateIconHelper(iconName: string) {
     this.animateIcon[iconName] = true;
     setTimeout(() => {
       this.animateIcon[iconName] = false;

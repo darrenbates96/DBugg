@@ -128,9 +128,9 @@ p {
 }
 
 .animate-icon-container {
-  background-color: $animation-grey;
+  background-color: $icon-animation-background;
   transform: scale(1.04);
-  border: 1px solid $animation-grey-darker;
+  border: 1px solid $icon-animation-border;
 }
 
 // Other

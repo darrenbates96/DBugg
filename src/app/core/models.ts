@@ -1,3 +1,7 @@
+// Types
+
+export type PanelItem = 'Birds Eye View' | 'About' | 'Contact';
+
 // FireStore Models
 
 export interface FireStoreProblem {
@@ -64,4 +68,11 @@ export interface Reply {
   id: number;
   dateCreated: Date;
   content: string;
+}
+
+// Navigation Bar
+
+export interface NavigationBarItem {
+  item: PanelItem;
+  path: string;
 }

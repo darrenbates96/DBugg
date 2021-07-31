@@ -9,27 +9,31 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: $app-background;
   overflow: hidden;
 }
 
-// Text
+// Text & List
 
 h1,
 h2,
 p,
+ul,
 li,
 span {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: lighter;
+  margin: 0;
+  padding: 0;
 }
 
 h1,
-h2 {
+h2,
+li {
   color: $text-black;
 }
 
-p,
-li {
+p {
   color: $text-grey;
 }
 
@@ -78,4 +82,71 @@ li {
   -webkit-align-items: flex-end;
   -ms-flex-align: end;
   align-items: flex-end;
+}
+
+.align-self-center {
+  -webkit-align-self: center;
+  -ms-flex-align-self: center;
+  align-self: center;
+}
+
+// Animations
+
+.fade-in {
+  animation: fadeIn 0.3s 1 forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+.fade-in-slide-up {
+  animation: fadeInSlideUp 0.3s 1 forwards;
+}
+
+@keyframes fadeInSlideUp {
+  0% {
+      opacity: 0;
+      transform: translateY(16px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+// Icon
+
+.icon-container {
+  width: 48px;
+  height: 48px;
+  @extend .flex-column;
+  @extend .justify-content-center;
+  @extend .align-items-center;
+  border-radius: 50%;
+  border: 1px solid #ffffff;
+  transition: 0.2s ease-in-out;
+}
+
+.animate-icon-container {
+  background-color: $icon-animation-background;
+  transform: scale(1.04);
+  border: 1px solid $icon-animation-border;
+}
+
+// Spacing
+
+.ml-8 {
+  margin-left: 8px;
+}
+
+// Other
+
+.clickable {
+  cursor: pointer;
 }

@@ -1,0 +1,86 @@
+<section class="navigation-bar-container">
+	<!-- Navigation Bar (Desktop) -->
+	<div class="navigation-bar-menu-desktop-container">
+		<h1 class="navigation-bar-blog-name clickable" (click)="performNavigation('/')">DBugg.</h1>
+		<ul class="navigation-bar-menu-desktop">
+			<li
+				*ngFor="let item of items"
+				class="navigation-bar-menu-item"
+				(click)="performNavigation(item.path)"
+			>
+				{{ item.item }}
+			</li>
+		</ul>
+	</div>
+	<!---->
+
+	<!-- Content -->
+	<div class="navigation-bar-content">
+		<ng-content content></ng-content>
+	</div>
+	<!---->
+
+	<!-- Navigation Bar (Mobile) -->
+	<div class="navigation-bar-menu">
+		<div 
+			class="icon-container ml-8" 
+			[class.animate-icon-container]="animateIcon['name']"
+			(click)="performNavigateToBirdsEyeView()"
+		>
+			<h1 class="navigation-bar-blog-name">DBugg.</h1>
+		</div>
+		<div
+			class="icon-container"
+			[class.animate-icon-container]="animateIcon['menu']"
+			(click)="performToggleFullPageMenu('menu')"
+		>
+			<img
+				class="navigation-bar-icon"
+				src="./assets/menu.png"
+				alt="Three horizontal lines above one another"
+			/>
+		</div>
+		<div
+			class="icon-container"
+			[class.animate-icon-container]="animateIcon['search']"
+			(click)="performToggleSearchBar()"
+		>
+			<img
+				class="navigation-bar-icon"
+				src="./assets/search.png"
+				alt="Magnifying glass"
+			/>
+		</div>
+	</div>
+	<!---->
+
+	<!-- Full Page Menu (Mobile) -->
+	<div
+		class="navigation-bar-full-page-menu-container"
+		[class.navigation-bar-full-page-menu-container-disabled]="
+			!showFullPageMenu
+		"
+	>
+		<ul class="navigation-bar-full-page-menu fade-in-slide-up">
+			<li
+				*ngFor="let item of items"
+				class="navigation-bar-full-page-menu-item"
+				(click)="performNavigation(item.path)"
+			>
+				{{ item.item }}
+			</li>
+		</ul>
+		<div
+			class="icon-container navigation-bar-close-icon-container"
+			[class.animate-icon-container]="animateIcon['close']"
+			(click)="performToggleFullPageMenu('close')"
+		>
+			<img
+				class="navigation-bar-icon"
+				src="./assets/close.png"
+				alt="Black cross"
+			/>
+		</div>
+	</div>
+	<!---->
+</section>

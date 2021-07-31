@@ -1,6 +1,7 @@
 <section class="navigation-bar-container">
 	<!-- Navigation Bar (Desktop) -->
 	<div class="navigation-bar-menu-desktop-container">
+		<h1 class="navigation-bar-blog-name clickable" (click)="performNavigation('/')">DBugg.</h1>
 		<ul class="navigation-bar-menu-desktop">
 			<li
 				*ngFor="let item of items"
@@ -26,7 +27,7 @@
 			[class.animate-icon-container]="animateIcon['name']"
 			(click)="performNavigateToBirdsEyeView()"
 		>
-			<h1 class="navigation-bar-blog-name">DBug.</h1>
+			<h1 class="navigation-bar-blog-name">DBugg.</h1>
 		</div>
 		<div
 			class="icon-container"

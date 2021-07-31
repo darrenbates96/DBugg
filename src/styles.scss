@@ -84,6 +84,12 @@ p {
   align-items: flex-end;
 }
 
+.align-self-center {
+  -webkit-align-self: center;
+  -ms-flex-align-self: center;
+  align-self: center;
+}
+
 // Animations
 
 .fade-in {

@@ -21,14 +21,15 @@
   display: none;
   width: calc(100% - 48px);
   height: 120px;
-  @extend .justify-content-end;
+  @extend .justify-content-space-between;
   @extend .align-items-end;
   padding: 0 24px;
 }
 
 .navigation-bar-blog-name {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
+  @extend .align-self-center;
 }
 
 .navigation-bar-menu-desktop {
@@ -106,6 +107,9 @@
   }
   .navigation-bar-menu-desktop-container {
     display: flex;
+  }
+  .navigation-bar-blog-name {
+    font-size: 26px;
   }
   .navigation-bar-content {
     height: calc(100% - 120px);

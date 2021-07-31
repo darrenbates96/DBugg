@@ -1,13 +1,5 @@
 @import "src/styles.scss";
 
-// TODO: Remove below and create/find blog icon
-.navigation-bar-standby-circle {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: #0f0f0f;
-}
-
 .navigation-bar-container {
   position: relative;
   width: 100%;
@@ -32,6 +24,11 @@
   @extend .justify-content-end;
   @extend .align-items-end;
   padding: 0 24px;
+}
+
+.navigation-bar-blog-name {
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .navigation-bar-menu-desktop {

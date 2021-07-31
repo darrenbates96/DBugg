@@ -14,6 +14,7 @@ export class NavigationBarComponent implements OnInit {
   showFullPageMenu: boolean = false;
 
   animateIcon: { [iconName: string]: boolean } = {
+    name: false,
     menu: false,
     search: false,
     close: false,
@@ -28,6 +29,11 @@ export class NavigationBarComponent implements OnInit {
     if (this.showFullPageMenu) {
       this.showFullPageMenu = false;
     }
+  }
+
+  performNavigateToBirdsEyeView() {
+    this.animateIconHelper('name');
+    this.performNavigation('/')
   }
 
   performToggleFullPageMenu(iconName: string) {

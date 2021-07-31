@@ -21,8 +21,12 @@
 
 	<!-- Navigation Bar (Mobile) -->
 	<div class="navigation-bar-menu">
-		<div class="icon-container">
-			<div class="navigation-bar-standby-circle"></div>
+		<div 
+			class="icon-container ml-8" 
+			[class.animate-icon-container]="animateIcon['name']"
+			(click)="performNavigateToBirdsEyeView()"
+		>
+			<h1 class="navigation-bar-blog-name">DBug.</h1>
 		</div>
 		<div
 			class="icon-container"

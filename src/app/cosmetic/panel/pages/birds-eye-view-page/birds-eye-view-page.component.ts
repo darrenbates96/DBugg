@@ -17,14 +17,16 @@ export class BirdsEyeViewPageComponent implements OnInit {
 	constructor(private birdsEyeViewService: BirdsEyeViewService) {}
 
 	ngOnInit(): void {
-		this.birdsEyeViewService
-			.getBirdsEyeViewProblems()
+		this.birdsEyeViewService.birdsEyeViewProblems$
 			.pipe(takeUntil(this.closeSubscriptions))
 			.subscribe((birdsEyeViewProblems) => {
-				if (birdsEyeViewProblems.length) {
+				if (birdsEyeViewProblems !== this.birdsEyeViewProblems) {
 					this.birdsEyeViewProblems = birdsEyeViewProblems;
 				}
 			});
+		if (!this.birdsEyeViewProblems.length) {
+			this.birdsEyeViewService.getBirdsEyeViewProblems();
+		}
 	}
 
 	ngOnDestroy(): void {

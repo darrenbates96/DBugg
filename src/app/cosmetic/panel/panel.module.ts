@@ -7,7 +7,6 @@ import { BirdsEyeViewPageComponent } from './pages/birds-eye-view-page/birds-eye
 import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { NavigationBarComponent } from './components/navigation-bar/navigation-bar.component';
-import { BirdsEyeViewService } from 'src/app/core/services/birds-eye-view/birds-eye-view.service';
 
 @NgModule({
 	declarations: [

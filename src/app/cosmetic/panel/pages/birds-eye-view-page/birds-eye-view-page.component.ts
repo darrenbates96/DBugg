@@ -25,7 +25,7 @@ export class BirdsEyeViewPageComponent implements OnInit {
 				}
 			});
 		if (!this.birdsEyeViewProblems.length) {
-			this.birdsEyeViewService.getBirdsEyeViewProblems();
+			this.birdsEyeViewService.readBirdsEyeViewProblems();
 		}
 	}
 

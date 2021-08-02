@@ -22,7 +22,7 @@ export class BirdsEyeViewService {
 		this._birdsEyeViewProblems.next(birdsEyeViewProblems);
 	}
 
-	getBirdsEyeViewProblems(): void {
+	readBirdsEyeViewProblems(): void {
 		this.angularFireStore
 			.collection<BirdsEyeViewProblem>('birdseyeviewproblems')
 			.valueChanges()
@@ -31,5 +31,11 @@ export class BirdsEyeViewService {
 					this._setBirdsEyeViewProblems(birdsEyeViewProblems);
 				}
 			});
+	}
+
+	createBirdsEyeViewProblem(birdsEyeViewProblem: BirdsEyeViewProblem): void {
+		this.angularFireStore
+			.collection<BirdsEyeViewProblem>('birdseyeviewproblems')
+			.add(birdsEyeViewProblem);
 	}
 }

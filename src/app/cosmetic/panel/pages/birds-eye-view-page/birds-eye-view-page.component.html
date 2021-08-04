@@ -1,3 +1,20 @@
 <section class="bev-container fade-in-slide-up">
-	<p>birds-eye-view-page works!</p>
+	<!-- Loading Spinner -->
+
+	<div
+		*ngIf="dataHasArrived; else showBirdsEyeViewProblems"
+		class="bev-loading-spinner-container"
+	>
+		<app-loading-spinner></app-loading-spinner>
+	</div>
+
+	<!---->
+
+	<!-- Content -->
+
+	<ng-template #showBirdsEyeViewProblems>
+		<div class="bev-content"></div>
+	</ng-template>
+
+	<!---->
 </section>

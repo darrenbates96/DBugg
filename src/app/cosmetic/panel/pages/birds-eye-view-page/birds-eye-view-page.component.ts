@@ -12,6 +12,8 @@ import { BirdsEyeViewService } from 'src/app/core/services/birds-eye-view/birds-
 export class BirdsEyeViewPageComponent implements OnInit {
 	birdsEyeViewProblems: BirdsEyeViewProblem[] = [];
 
+	dataHasArrived: boolean = false;
+
 	closeSubscriptions: Subject<void> = new Subject<void>();
 
 	constructor(private birdsEyeViewService: BirdsEyeViewService) {}
@@ -22,6 +24,7 @@ export class BirdsEyeViewPageComponent implements OnInit {
 			.subscribe((birdsEyeViewProblems) => {
 				if (birdsEyeViewProblems !== this.birdsEyeViewProblems) {
 					this.birdsEyeViewProblems = birdsEyeViewProblems;
+					this.dataHasArrived = true;
 				}
 			});
 		if (!this.birdsEyeViewProblems.length) {

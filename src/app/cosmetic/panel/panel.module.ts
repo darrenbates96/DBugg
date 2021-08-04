@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PanelRoutingModule } from './panel-routing.module';
+import { LoadingSpinnerModule } from '../shared/loading-spinner/loading-spinner.component';
 
 import { PanelComponent } from './panel.component';
 import { BirdsEyeViewPageComponent } from './pages/birds-eye-view-page/birds-eye-view-page.component';
@@ -16,6 +17,6 @@ import { NavigationBarComponent } from './components/navigation-bar/navigation-b
 		ContactPageComponent,
 		NavigationBarComponent,
 	],
-	imports: [CommonModule, PanelRoutingModule],
+	imports: [CommonModule, PanelRoutingModule, LoadingSpinnerModule],
 })
 export class PanelModule {}

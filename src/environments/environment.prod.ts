@@ -1,12 +1,13 @@
+// Test
+
 export const environment = {
-  production: true,
-  firebaseConfig: {
-    apiKey: "AIzaSyDpryWRLfQHK_YHlj8rpwGsaerfVrtmPd4",
-    authDomain: "blog-88bea.firebaseapp.com",
-    projectId: "blog-88bea",
-    storageBucket: "blog-88bea.appspot.com",
-    messagingSenderId: "1014647628472",
-    appId: "1:1014647628472:web:b618b43878e7f7961f0a4d",
-    measurementId: "G-R7XNSG4CN1"
-  },
+	production: true,
+	firebaseConfig: {
+		aapiKey: 'AIzaSyC9z-_rUIBP9NeOK6EVQXekCvl16G3dFkM',
+		authDomain: 'dbugg-dev.firebaseapp.com',
+		projectId: 'dbugg-dev',
+		storageBucket: 'dbugg-dev.appspot.com',
+		messagingSenderId: '227718180011',
+		appId: '1:227718180011:web:d56a9bcd73dc4aaf621bee',
+	},
 };

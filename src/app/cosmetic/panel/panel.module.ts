@@ -9,7 +9,13 @@ import { ContactPageComponent } from './pages/contact-page/contact-page.componen
 import { NavigationBarComponent } from './components/navigation-bar/navigation-bar.component';
 
 @NgModule({
-  declarations: [PanelComponent, BirdsEyeViewPageComponent, AboutPageComponent, ContactPageComponent, NavigationBarComponent],
-  imports: [CommonModule, PanelRoutingModule],
+	declarations: [
+		PanelComponent,
+		BirdsEyeViewPageComponent,
+		AboutPageComponent,
+		ContactPageComponent,
+		NavigationBarComponent,
+	],
+	imports: [CommonModule, PanelRoutingModule],
 })
 export class PanelModule {}

@@ -22,12 +22,12 @@ export class BirdsEyeViewPageComponent implements OnInit {
 		this.birdsEyeViewService.birdsEyeViewProblems$
 			.pipe(takeUntil(this.closeSubscriptions))
 			.subscribe((birdsEyeViewProblems) => {
-				if (birdsEyeViewProblems !== this.birdsEyeViewProblems) {
+				if (birdsEyeViewProblems.length) {
 					this.birdsEyeViewProblems = birdsEyeViewProblems;
 					this.dataHasArrived = true;
 				}
 			});
-		if (!this.birdsEyeViewProblems.length) {
+		if (!this.dataHasArrived) {
 			this.birdsEyeViewService.readBirdsEyeViewProblems();
 		}
 	}

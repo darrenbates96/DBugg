@@ -8,6 +8,7 @@ import { BirdsEyeViewPageComponent } from './pages/birds-eye-view-page/birds-eye
 import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { NavigationBarComponent } from './components/navigation-bar/navigation-bar.component';
+import { BirdsEyeViewProblemComponent } from './components/birds-eye-view-problem/birds-eye-view-problem.component';
 
 @NgModule({
 	declarations: [
@@ -16,6 +17,7 @@ import { NavigationBarComponent } from './components/navigation-bar/navigation-b
 		AboutPageComponent,
 		ContactPageComponent,
 		NavigationBarComponent,
+  BirdsEyeViewProblemComponent,
 	],
 	imports: [CommonModule, PanelRoutingModule, LoadingSpinnerModule],
 })

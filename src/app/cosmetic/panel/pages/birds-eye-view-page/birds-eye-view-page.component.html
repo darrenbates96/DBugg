@@ -2,7 +2,7 @@
 	<!-- Loading Spinner -->
 
 	<div
-		*ngIf="dataHasArrived; else showBirdsEyeViewProblems"
+		*ngIf="!dataHasArrived; else showBirdsEyeViewProblems"
 		class="bev-loading-spinner-container"
 	>
 		<app-loading-spinner></app-loading-spinner>
@@ -13,7 +13,16 @@
 	<!-- Content -->
 
 	<ng-template #showBirdsEyeViewProblems>
-		<div class="bev-content"></div>
+		<div class="bev-content">
+			<div
+				*ngFor="let birdsEyeViewProblem of birdsEyeViewProblems"
+				class="bev-problem-container"
+			>
+				<app-birds-eye-view-problem
+					[birdsEyeViewProblem]="birdsEyeViewProblem"
+				></app-birds-eye-view-problem>
+			</div>
+		</div>
 	</ng-template>
 
 	<!---->

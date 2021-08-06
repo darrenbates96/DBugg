@@ -38,7 +38,7 @@ export interface FireStoreContactRecord {
 // Birds Eye View
 
 export interface BirdsEyeViewProblem {
-	id?: number;
+	problemId: string;
 	dateCreated: Date;
 	title: string;
 	tags: string[];

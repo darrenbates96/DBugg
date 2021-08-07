@@ -10,11 +10,15 @@
 	<button
 		class="bevp-button"
 		[class.bevp-button-animate]="animateButton"
-		(click)="performNavigateToProblem()"
+		(click)="performNavigateToProblemWithAnimation()"
 	>
-		<div class="bevp-button-arrow-container">
-			<span class="bevp-button-arrow">></span>
+		<div
+			class="bevp-button-arrow-container"
+			(click)="performNavigateToProblem()"
+		>
+			<span class="bevp-button-arrow"> > </span>
+			<span class="bevp-button-text"> Read </span>
 		</div>
-		<span class="bevp-button-text"> Read </span>
+		Read
 	</button>
 </section>

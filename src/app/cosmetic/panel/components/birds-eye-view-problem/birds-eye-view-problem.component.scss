@@ -42,13 +42,12 @@
 	width: 180px;
 	height: 40px;
 	margin-top: 18px;
-	span {
-		color: unset;
-	}
+	font-size: 16px;
 	color: $background;
 	background-color: $highlight;
 	border: 1px solid $highlight;
 	border-radius: 20px;
+	@extend .clickable;
 	transition: 0.2s ease-in-out;
 }
 
@@ -58,33 +57,55 @@
 }
 
 .bevp-button-arrow-container {
-	visibility: hidden;
+	display: none;
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 39px;
-	height: 39px;
+	width: 34px;
+	height: 34px;
 	@extend .flex-row;
 	@extend .justify-content-center;
 	@extend .align-items-center;
+	span {
+		color: unset;
+	}
+	color: $background;
 	background-color: $highlight;
 	border-radius: 50%;
+	transition: 0.2s ease-in-out;
 }
 
 .bevp-button-arrow {
 	font-size: 24px;
-	font-weight: bold;
 }
 
 .bevp-button-text {
+	display: none;
 	font-size: 16px;
-	font-weight: bold;
 }
 
 // Media Queries
 
 @media screen and (min-width: 576px) {
+	.bevp-button {
+		color: $highlight;
+		background-color: $background;
+		border: none;
+	}
 	.bevp-button-arrow-container {
-		visibility: visible;
+		display: flex;
+	}
+	.bevp-button:hover {
+		.bevp-button-arrow-container {
+			width: 180px;
+			border: 1px solid $highlight;
+			border-radius: 20px;
+		}
+		.bevp-button-arrow {
+			display: none;
+		}
+		.bevp-button-text {
+			display: block;
+		}
 	}
 }

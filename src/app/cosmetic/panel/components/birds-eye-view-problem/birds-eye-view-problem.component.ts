@@ -17,13 +17,19 @@ export class BirdsEyeViewProblemComponent implements OnInit {
 
 	ngOnInit(): void {}
 
-	performNavigateToProblem() {
+	performNavigateToProblemWithAnimation() {
 		this.animateButtonHelper();
 		setTimeout(() => {
 			this.router.navigate([
 				`/problem/${this.birdsEyeViewProblem.problemId}`,
 			]);
 		}, 400);
+	}
+
+	performNavigateToProblem() {
+		this.router.navigate([
+			`/problem/${this.birdsEyeViewProblem.problemId}`,
+		]);
 	}
 
 	animateButtonHelper() {

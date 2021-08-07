@@ -1,9 +1,20 @@
 <section class="bevp-container">
-	<h1>{{ birdsEyeViewProblem.title }}</h1>
-	<div>
-		<div *ngFor="let tag of birdsEyeViewProblem.tags">{{ tag }}</div>
+	<h1 class="bevp-title">{{ birdsEyeViewProblem.title }}</h1>
+	<p class="bevp-date">{{ birdsEyeViewProblem.dateCreated }}</p>
+	<p class="bevp-overview">{{ birdsEyeViewProblem.overview }}</p>
+	<div class="bevp-tags-container">
+		<div *ngFor="let tag of birdsEyeViewProblem.tags" class="bevp-tag">
+			{{ tag }}
+		</div>
 	</div>
-	<p>{{ birdsEyeViewProblem.overview }}</p>
-	<p>{{ birdsEyeViewProblem.dateCreated }}</p>
-	<button (click)="performNavigateToProblem()">Read</button>
+	<button
+		class="bevp-button"
+		[class.bevp-button-animate]="animateButton"
+		(click)="performNavigateToProblem()"
+	>
+		<div class="bevp-button-arrow-container">
+			<span class="bevp-button-arrow">></span>
+		</div>
+		<span class="bevp-button-text"> Read </span>
+	</button>
 </section>

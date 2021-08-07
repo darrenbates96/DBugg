@@ -1,4 +1,90 @@
+@import "src/styles.scss";
+
 .bevp-container {
 	width: 100%;
 	height: fit-content;
+}
+
+.bevp-title {
+	font-size: 32px;
+}
+
+.bevp-date {
+	font-size: 12px;
+	margin-top: 8px;
+}
+
+.bevp-overview {
+	font-size: 16px;
+	color: $grey;
+	margin-top: 8px;
+}
+
+.bevp-tags-container {
+	@extend .flex-row;
+	@extend .flex-wrap;
+	margin-top: 16px;
+}
+
+.bevp-tag {
+	width: fit-content;
+	height: 22px;
+	@extend .flex-row;
+	@extend .align-items-center;
+	margin-right: 8px;
+	padding: 0 8px;
+	border-radius: 11px;
+	border: 1px solid $highlight;
+}
+
+.bevp-button {
+	position: relative;
+	width: 180px;
+	height: 40px;
+	margin-top: 18px;
+	span {
+		color: unset;
+	}
+	color: $background;
+	background-color: $highlight;
+	border: 1px solid $highlight;
+	border-radius: 20px;
+	transition: 0.2s ease-in-out;
+}
+
+.bevp-button-animate {
+	background-color: $icon-animation-background;
+	color: $highlight;
+}
+
+.bevp-button-arrow-container {
+	visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 39px;
+	height: 39px;
+	@extend .flex-row;
+	@extend .justify-content-center;
+	@extend .align-items-center;
+	background-color: $highlight;
+	border-radius: 50%;
+}
+
+.bevp-button-arrow {
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.bevp-button-text {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+// Media Queries
+
+@media screen and (min-width: 576px) {
+	.bevp-button-arrow-container {
+		visibility: visible;
+	}
 }

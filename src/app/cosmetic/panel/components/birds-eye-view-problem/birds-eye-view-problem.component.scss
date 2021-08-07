@@ -23,7 +23,7 @@
 .bevp-tags-container {
 	@extend .flex-row;
 	@extend .flex-wrap;
-	margin-top: 16px;
+	margin-top: 8px;
 }
 
 .bevp-tag {
@@ -31,7 +31,7 @@
 	height: 22px;
 	@extend .flex-row;
 	@extend .align-items-center;
-	margin-right: 8px;
+	margin: 8px 8px 0 0;
 	padding: 0 8px;
 	border-radius: 11px;
 	border: 1px solid $highlight;

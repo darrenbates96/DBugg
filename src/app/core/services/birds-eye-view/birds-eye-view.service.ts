@@ -18,7 +18,7 @@ export class BirdsEyeViewService {
 
 	private _setBirdsEyeViewProblems(
 		birdsEyeViewProblems: BirdsEyeViewProblem[]
-	) {
+	): void {
 		this._birdsEyeViewProblems.next(birdsEyeViewProblems);
 	}
 

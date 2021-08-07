@@ -1,14 +1,5 @@
 {
   "projects": {
-    "default": "blog-88bea"
-  },
-  "targets": {
-    "blog-88bea": {
-      "hosting": {
-        "blog": [
-          "blog-88bea"
-        ]
-      }
-    }
+    "default": "dbugg-dev"
   }
 }

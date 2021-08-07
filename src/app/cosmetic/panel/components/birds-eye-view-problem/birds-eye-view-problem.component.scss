@@ -1,0 +1,111 @@
+@import "src/styles.scss";
+
+.bevp-container {
+	width: 100%;
+	height: fit-content;
+}
+
+.bevp-title {
+	font-size: 32px;
+}
+
+.bevp-date {
+	font-size: 12px;
+	margin-top: 8px;
+}
+
+.bevp-overview {
+	font-size: 16px;
+	color: $grey;
+	margin-top: 8px;
+}
+
+.bevp-tags-container {
+	@extend .flex-row;
+	@extend .flex-wrap;
+	margin-top: 8px;
+}
+
+.bevp-tag {
+	width: fit-content;
+	height: 22px;
+	@extend .flex-row;
+	@extend .align-items-center;
+	margin: 8px 8px 0 0;
+	padding: 0 8px;
+	border-radius: 11px;
+	border: 1px solid $highlight;
+}
+
+.bevp-button {
+	position: relative;
+	width: 180px;
+	height: 40px;
+	margin-top: 18px;
+	font-size: 16px;
+	color: $background;
+	background-color: $highlight;
+	border: 1px solid $highlight;
+	border-radius: 20px;
+	@extend .clickable;
+	transition: 0.2s ease-in-out;
+}
+
+.bevp-button-animate {
+	background-color: $icon-animation-background;
+	color: $highlight;
+}
+
+.bevp-button-arrow-container {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 34px;
+	height: 34px;
+	@extend .flex-row;
+	@extend .justify-content-center;
+	@extend .align-items-center;
+	span {
+		color: unset;
+	}
+	color: $background;
+	background-color: $highlight;
+	border-radius: 50%;
+	transition: 0.2s ease-in-out;
+}
+
+.bevp-button-arrow {
+	font-size: 24px;
+}
+
+.bevp-button-text {
+	display: none;
+	font-size: 16px;
+}
+
+// Media Queries
+
+@media screen and (min-width: 576px) {
+	.bevp-button {
+		color: $highlight;
+		background-color: $background;
+		border: none;
+	}
+	.bevp-button-arrow-container {
+		display: flex;
+	}
+	.bevp-button:hover {
+		.bevp-button-arrow-container {
+			width: 180px;
+			border: 1px solid $highlight;
+			border-radius: 20px;
+		}
+		.bevp-button-arrow {
+			display: none;
+		}
+		.bevp-button-text {
+			display: block;
+		}
+	}
+}

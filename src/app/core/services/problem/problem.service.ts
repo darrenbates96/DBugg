@@ -1,26 +1,28 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import {
-  Reply,
-  Comment,
-  Problem,
-  FireStoreComment,
-  FireStoreReply,
-} from 'src/core/models';
+// import {
+//   Reply,
+//   Comment,
+//   Problem,
+//   FireStoreComment,
+//   FireStoreReply,
+// } from 'src/core/models';
 
 @Injectable({
-  providedIn: 'root',
+	providedIn: 'root',
 })
 export class ProblemService {
-  constructor() {}
+	constructor() {}
 
-  getReplies(): Observable<Reply[]> {}
+	createProblem(): void {}
 
-  getComments(): Observable<Comment[]> {}
+	// getReplies(): Observable<Reply[]> {}
 
-  getProblem(): Observable<Problem> {}
+	// getComments(): Observable<Comment[]> {}
 
-  createComment(): Observable<FireStoreComment> {}
+	// getProblem(): Observable<Problem> {}
 
-  createReply(): Observable<FireStoreReply> {}
+	// createComment(): Observable<FireStoreComment> {}
+
+	// createReply(): Observable<FireStoreReply> {}
 }

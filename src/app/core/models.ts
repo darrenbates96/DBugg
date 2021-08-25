@@ -1,15 +1,15 @@
-// Types
+// Type
 
 export type PanelItem = 'Birds Eye View' | 'About' | 'Contact';
 
-// FireStore Models
+// FireStore
 
 export interface FireStoreProblem {
 	id: number;
 	dateCreated: Date;
 	title: string;
-	tags: string[];
 	overview: string;
+	tags: string[];
 	content: string;
 	commentIds: number[];
 }
@@ -35,24 +35,14 @@ export interface FireStoreContactRecord {
 	content: string;
 }
 
-// Birds Eye View
-
-export interface BirdsEyeViewProblem {
-	problemId: string;
-	dateCreated: Date;
-	title: string;
-	tags: string[];
-	overview: string;
-}
-
 // Problem
 
 export interface Problem {
 	id: number;
 	dateCreated: Date;
 	title: string;
-	tags: string[];
 	overview: string;
+	tags: string[];
 	content: string;
 	comments: Comment[];
 }
@@ -68,6 +58,41 @@ export interface Reply {
 	id: number;
 	dateCreated: Date;
 	content: string;
+}
+
+// Problem Section
+
+export interface ProblemSectionTypeOne {
+	title: string;
+	body: string;
+}
+
+export interface ProblemSectionTypeTwo {
+	title: string;
+	body: string;
+	image: string;
+}
+
+export interface ProblemSectionTypeThree {
+	title: string;
+	firstBody: string;
+	image: string;
+	secondBody: string;
+}
+
+export interface ProblemSectionTypeFour {
+	title: string;
+	image: string;
+}
+
+// Birds Eye View
+
+export interface BirdsEyeViewProblem {
+	problemId: string;
+	dateCreated: Date;
+	title: string;
+	tags: string[];
+	overview: string;
 }
 
 // Navigation Bar

@@ -1,14 +1,26 @@
 import {
 	FireStoreComment,
 	FireStoreContactRecord,
+	FireStoreProblem,
 	FireStoreReply,
 	ProblemSectionTypeFour,
 	ProblemSectionTypeOne,
 	ProblemSectionTypeThree,
 	ProblemSectionTypeTwo,
+	Section,
 } from './models';
 
 // Problem
+
+export class ProblemClass implements FireStoreProblem {
+	id = null;
+	dateCreated = null;
+	title = '';
+	overview = '';
+	tags = [];
+	content = [];
+	commentIds = [];
+}
 
 export class CommentClass implements FireStoreComment {
 	id = null;

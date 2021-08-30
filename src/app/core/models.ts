@@ -1,16 +1,17 @@
 // Type
 
 export type PanelItem = 'Birds Eye View' | 'About' | 'Contact';
+export type ProblemSectionType = 'one' | 'two' | 'three' | 'four';
 
 // FireStore
 
 export interface FireStoreProblem {
-	id: number;
-	dateCreated: Date;
+	id: number | null;
+	dateCreated: Date | null;
 	title: string;
 	overview: string;
 	tags: string[];
-	content: string;
+	content: Section[];
 	commentIds: number[];
 }
 
@@ -32,31 +33,6 @@ export interface FireStoreReply {
 export interface FireStoreContactRecord {
 	id: number | null;
 	email: string;
-	content: string;
-}
-
-// Problem
-
-export interface Problem {
-	id: number;
-	dateCreated: Date;
-	title: string;
-	overview: string;
-	tags: string[];
-	content: string;
-	comments: Comment[];
-}
-
-export interface Comment {
-	id: number;
-	dateCreated: Date;
-	content: string;
-	replies: Reply[];
-}
-
-export interface Reply {
-	id: number;
-	dateCreated: Date;
 	content: string;
 }
 
@@ -83,6 +59,40 @@ export interface ProblemSectionTypeThree {
 export interface ProblemSectionTypeFour {
 	title: string;
 	image: string;
+}
+
+// Problem
+
+export interface Section {
+	sectionType: ProblemSectionType;
+	sectionContent:
+		| ProblemSectionTypeOne
+		| ProblemSectionTypeTwo
+		| ProblemSectionTypeThree
+		| ProblemSectionTypeFour;
+}
+
+export interface Problem {
+	id: number;
+	dateCreated: Date;
+	title: string;
+	overview: string;
+	tags: string[];
+	content: Section[];
+	comments: Comment[];
+}
+
+export interface Comment {
+	id: number;
+	dateCreated: Date;
+	content: string;
+	replies: Reply[];
+}
+
+export interface Reply {
+	id: number;
+	dateCreated: Date;
+	content: string;
 }
 
 // Birds Eye View

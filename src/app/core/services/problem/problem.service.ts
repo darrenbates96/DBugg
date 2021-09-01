@@ -1,20 +1,22 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-// import {
-//   Reply,
-//   Comment,
-//   Problem,
-//   FireStoreComment,
-//   FireStoreReply,
-// } from 'src/core/models';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { FireStoreProblem } from 'src/app/core/models';
 
 @Injectable({
 	providedIn: 'root',
 })
 export class ProblemService {
-	constructor() {}
+	constructor(private angularFireStore: AngularFirestore) {}
 
-	createProblem(): void {}
+	createProblem(problem: FireStoreProblem): void {
+		const problemReference = this.angularFireStore
+			.collection<FireStoreProblem>('problems')
+			.doc();
+		problemReference.set({
+			...problem,
+			id: problemReference.ref.id,
+		});
+	}
 
 	// getReplies(): Observable<Reply[]> {}
 

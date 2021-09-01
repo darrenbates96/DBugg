@@ -11,7 +11,7 @@ import {
 
 // Problem
 
-export class ProblemClass implements FireStoreProblem {
+export class FireStoreProblemClass implements FireStoreProblem {
 	id = null;
 	dateCreated = null;
 	title = '';
@@ -21,7 +21,7 @@ export class ProblemClass implements FireStoreProblem {
 	commentIds = [];
 }
 
-export class CommentClass implements FireStoreComment {
+export class FireStoreCommentClass implements FireStoreComment {
 	id = null;
 	problemId = null;
 	dateCreated = null;
@@ -29,7 +29,7 @@ export class CommentClass implements FireStoreComment {
 	replyIds = [];
 }
 
-export class ReplyClass implements FireStoreReply {
+export class FireStoreReplyClass implements FireStoreReply {
 	id = null;
 	commentId = null;
 	dateCreated = null;
@@ -63,7 +63,7 @@ export class ProblemSectionTypeFourClass implements ProblemSectionTypeFour {
 
 // Contact
 
-export class ContactClass implements FireStoreContactRecord {
+export class FireStoreContactClass implements FireStoreContactRecord {
 	id = null;
 	email = '';
 	content = '';

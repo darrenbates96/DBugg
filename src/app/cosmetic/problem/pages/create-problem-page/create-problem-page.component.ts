@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ProblemClass } from 'src/app/core/classes';
+import { FireStoreProblemClass } from 'src/app/core/classes';
 import { FireStoreProblem } from 'src/app/core/models';
+import { ProblemService } from 'src/app/core/services/problem/problem.service';
 
 @Component({
 	selector: 'app-create-problem-page',
@@ -8,7 +9,11 @@ import { FireStoreProblem } from 'src/app/core/models';
 	styleUrls: ['./create-problem-page.component.scss'],
 })
 export class CreateProblemPageComponent implements OnInit {
-	constructor() {}
+	problem: FireStoreProblem = new FireStoreProblemClass();
+
+	constructor(private problemService: ProblemService) {}
 
 	ngOnInit(): void {}
+
+	performCreateProblem(): void {}
 }

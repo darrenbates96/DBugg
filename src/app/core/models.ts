@@ -6,7 +6,7 @@ export type ProblemSectionType = 'one' | 'two' | 'three' | 'four';
 // FireStore
 
 export interface FireStoreProblem {
-	id: number | null;
+	id: string | null;
 	dateCreated: Date | null;
 	title: string;
 	overview: string;
@@ -73,7 +73,7 @@ export interface ProblemSectionTypeFour {
 // Problem
 
 export interface Problem {
-	id: number;
+	id: string;
 	dateCreated: Date;
 	title: string;
 	overview: string;

@@ -7,7 +7,6 @@ import {
 	ProblemSectionTypeOne,
 	ProblemSectionTypeThree,
 	ProblemSectionTypeTwo,
-	Section,
 } from './models';
 
 // Problem

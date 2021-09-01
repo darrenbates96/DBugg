@@ -38,6 +38,15 @@ export interface FireStoreContactRecord {
 
 // Problem Section
 
+export interface Section {
+	sectionType: ProblemSectionType;
+	sectionContent:
+		| ProblemSectionTypeOne
+		| ProblemSectionTypeTwo
+		| ProblemSectionTypeThree
+		| ProblemSectionTypeFour;
+}
+
 export interface ProblemSectionTypeOne {
 	title: string;
 	body: string;
@@ -62,15 +71,6 @@ export interface ProblemSectionTypeFour {
 }
 
 // Problem
-
-export interface Section {
-	sectionType: ProblemSectionType;
-	sectionContent:
-		| ProblemSectionTypeOne
-		| ProblemSectionTypeTwo
-		| ProblemSectionTypeThree
-		| ProblemSectionTypeFour;
-}
 
 export interface Problem {
 	id: number;

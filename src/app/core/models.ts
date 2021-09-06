@@ -7,7 +7,7 @@ export type ProblemSectionType = 'one' | 'two' | 'three' | 'four';
 
 export interface FireStoreProblem {
 	id: string | null;
-	dateCreated: Date | null;
+	dateCreated: number | null;
 	title: string;
 	overview: string;
 	tags: string[];

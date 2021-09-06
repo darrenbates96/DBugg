@@ -18,7 +18,7 @@ export interface FireStoreProblem {
 export interface FireStoreComment {
 	id: number | null;
 	problemId: number | null;
-	dateCreated: Date | null;
+	dateCreated: number | null;
 	content: string;
 	replyIds: number[];
 }
@@ -26,7 +26,7 @@ export interface FireStoreComment {
 export interface FireStoreReply {
 	id: number | null;
 	commentId: number | null;
-	dateCreated: Date | null;
+	dateCreated: number | null;
 	content: string;
 }
 
@@ -74,7 +74,7 @@ export interface ProblemSectionTypeFour {
 
 export interface Problem {
 	id: string;
-	dateCreated: Date;
+	dateCreated: number;
 	title: string;
 	overview: string;
 	tags: string[];
@@ -84,14 +84,14 @@ export interface Problem {
 
 export interface Comment {
 	id: number;
-	dateCreated: Date;
+	dateCreated: number;
 	content: string;
 	replies: Reply[];
 }
 
 export interface Reply {
 	id: number;
-	dateCreated: Date;
+	dateCreated: number;
 	content: string;
 }
 
@@ -99,7 +99,7 @@ export interface Reply {
 
 export interface BirdsEyeViewProblem {
 	problemId: string;
-	dateCreated: Date;
+	dateCreated: number;
 	title: string;
 	tags: string[];
 	overview: string;

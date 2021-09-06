@@ -1,30 +1,70 @@
 import {
-  FireStoreComment,
-  FireStoreContactRecord,
-  FireStoreReply,
+	FireStoreComment,
+	FireStoreContactRecord,
+	FireStoreProblem,
+	FireStoreReply,
+	ProblemSectionTypeFour,
+	ProblemSectionTypeOne,
+	ProblemSectionTypeThree,
+	ProblemSectionTypeTwo,
 } from './models';
 
 // Problem
 
-export class CommentClass implements FireStoreComment {
-  id = null;
-  problemId = null;
-  dateCreated = null;
-  content = '';
-  replyIds = [];
+export class FireStoreProblemClass implements FireStoreProblem {
+	id = null;
+	dateCreated = null;
+	title = '';
+	overview = '';
+	tags = [];
+	content = [];
+	commentIds = [];
 }
 
-export class ReplyClass implements FireStoreReply {
-  id = null;
-  commentId = null;
-  dateCreated = null;
-  content = '';
+export class FireStoreCommentClass implements FireStoreComment {
+	id = null;
+	problemId = null;
+	dateCreated = null;
+	content = '';
+	replyIds = [];
+}
+
+export class FireStoreReplyClass implements FireStoreReply {
+	id = null;
+	commentId = null;
+	dateCreated = null;
+	content = '';
+}
+
+// Problem Section
+
+export class ProblemSectionTypeOneClass implements ProblemSectionTypeOne {
+	title = '';
+	body = '';
+}
+
+export class ProblemSectionTypeTwoClass implements ProblemSectionTypeTwo {
+	title = '';
+	body = '';
+	image = '';
+}
+
+export class ProblemSectionTypeThreeClass implements ProblemSectionTypeThree {
+	title = '';
+	firstBody = '';
+	image = '';
+	secondBody = '';
+}
+
+export class ProblemSectionTypeFourClass implements ProblemSectionTypeFour {
+	title = '';
+	image = '';
 }
 
 // Contact
 
-export class ContactClass implements FireStoreContactRecord {
-  id = null;
-  email = '';
-  content = '';
+export class FireStoreContactClass implements FireStoreContactRecord {
+	id = null;
+	email = '';
+	content = '';
 }

@@ -1,20 +1,34 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-// import {
-//   Reply,
-//   Comment,
-//   Problem,
-//   FireStoreComment,
-//   FireStoreReply,
-// } from 'src/core/models';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { BirdsEyeViewProblem, FireStoreProblem } from 'src/app/core/models';
+import { BirdsEyeViewService } from '../birds-eye-view/birds-eye-view.service';
 
 @Injectable({
 	providedIn: 'root',
 })
 export class ProblemService {
-	constructor() {}
+	constructor(
+		private angularFireStore: AngularFirestore,
+		private birdsEyeViewService: BirdsEyeViewService
+	) {}
 
-	createProblem(): void {}
+	createProblem(problem: FireStoreProblem): void {
+		const problemReference = this.angularFireStore
+			.collection<FireStoreProblem>('problems')
+			.doc();
+		problemReference.set({
+			...problem,
+			id: problemReference.ref.id,
+		});
+
+		this.birdsEyeViewService.createBirdsEyeViewProblem({
+			problemId: problemReference.ref.id,
+			dateCreated: Date.now(),
+			title: problem.title,
+			tags: problem.tags,
+			overview: problem.overview,
+		});
+	}
 
 	// getReplies(): Observable<Reply[]> {}
 

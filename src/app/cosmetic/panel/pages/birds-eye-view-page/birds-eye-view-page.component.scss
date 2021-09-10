@@ -14,11 +14,6 @@
 	@extend .align-items-center;
 }
 
-.bev-content {
-	width: 100%;
-	height: fit-content;
-}
-
 .bev-problem-container {
 	width: calc(100% - 32px);
 	height: fit-content;
@@ -28,10 +23,6 @@
 // Media Queries
 
 @media screen and (min-width: 576px) {
-	.bev-content {
-		width: 50%;
-		margin: 0 auto;
-	}
 	.bev-problem-container {
 		width: 100%;
 		padding: 16px 0 0 0;

@@ -1,6 +1,8 @@
 <section class="bevp-container">
 	<h1 class="bevp-title">{{ birdsEyeViewProblem.title }}</h1>
-	<p class="bevp-date">{{ birdsEyeViewProblem.dateCreated }}</p>
+	<p class="bevp-date">
+		{{ birdsEyeViewProblem.dateCreated }}
+	</p>
 	<p class="bevp-overview">{{ birdsEyeViewProblem.overview }}</p>
 	<div class="bevp-tags-container">
 		<div *ngFor="let tag of birdsEyeViewProblem.tags" class="bevp-tag">

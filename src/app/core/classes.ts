@@ -13,7 +13,7 @@ import {
 
 export class FireStoreProblemClass implements FireStoreProblem {
 	id = null;
-	dateCreated = null;
+	dateCreated = '';
 	title = '';
 	overview = '';
 	tags = [];
@@ -24,7 +24,7 @@ export class FireStoreProblemClass implements FireStoreProblem {
 export class FireStoreCommentClass implements FireStoreComment {
 	id = null;
 	problemId = null;
-	dateCreated = null;
+	dateCreated = '';
 	content = '';
 	replyIds = [];
 }
@@ -32,7 +32,7 @@ export class FireStoreCommentClass implements FireStoreComment {
 export class FireStoreReplyClass implements FireStoreReply {
 	id = null;
 	commentId = null;
-	dateCreated = null;
+	dateCreated = '';
 	content = '';
 }
 

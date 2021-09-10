@@ -23,7 +23,7 @@ export class ProblemService {
 
 		this.birdsEyeViewService.createBirdsEyeViewProblem({
 			problemId: problemReference.ref.id,
-			dateCreated: Date.now(),
+			dateCreated: new Date().toUTCString(),
 			title: problem.title,
 			tags: problem.tags,
 			overview: problem.overview,

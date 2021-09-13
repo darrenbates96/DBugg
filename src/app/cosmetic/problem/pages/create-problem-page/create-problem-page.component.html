@@ -9,9 +9,23 @@
 			<input
 				class="input-field"
 				type="text"
-				placeholder="Title"
+				placeholder="What problem did you solve?"
 				[(ngModel)]="problem.title"
 			/>
+		</div>
+
+		<!---->
+
+		<!-- Overview -->
+
+		<div class="input-container">
+			<label class="input-label">Overview</label>
+			<textarea
+				class="textarea"
+				type="text"
+				placeholder="An overview of your post. This will be show on the Birds Eye View page!"
+				[(ngModel)]="problem.overview"
+			></textarea>
 		</div>
 
 		<!---->
